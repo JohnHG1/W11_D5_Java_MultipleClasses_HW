@@ -19,7 +19,7 @@ public class PlaneTest {
     @Test
     public void canAddPassengerToPlane(Passenger passenger){
         plane.addPassenger(passenger);
-        assertEquals(1, plane.getCapacity());
+        assertEquals(1, plane.capacity());
     }
 
     @Test
@@ -28,6 +28,13 @@ public class PlaneTest {
         assertEquals(1, plane.getNumberOfPassengers.size());
         assertEquals(5, passenger.getMoney());
         assertEquals(5, plane.getTicketCost());
+    }
+
+    @Test
+    public void canRemovePassengerFromPlane(Passenger passenger){
+        plane.addPassenger(passenger);
+        plane.removePassengerFromPlane();
+        assertEquals(0, plane.capacity());
     }
 
     @Test

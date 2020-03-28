@@ -32,7 +32,18 @@ public class Plane {
         return this.plane.flightNumber.ticketCost;
     }
 
-    public int getCapacity() {
+    public int capacity() {
         return this.flightNumber.size();
     }
+
+
+    public void removePassengerFromPlane() {
+        Passenger passengerRemoved = null;
+        if (this.capacity() > 0){
+            passengerRemoved = this.capacity.remove(0)
+        }
+        return passengerRemoved
+    }
+
+    public boolean hasP
 }
