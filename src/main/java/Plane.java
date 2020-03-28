@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Plane {
-    
+
     private final String flightnumber;
     private int capacity;
     private int maxNoOfBags;
