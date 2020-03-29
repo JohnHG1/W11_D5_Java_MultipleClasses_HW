@@ -23,15 +23,11 @@ public class Passenger {
      return passengerBags;
     }
 
-    public int getBagWeight() {
-        return bagWeight;
-    }
-
-    public int getMoney(){
+    public int hasMoney(){
         return this.money;
     }
-
-    public boolean sufficientMoney(int amount){
+//
+    public boolean InsufficientMoney(int amount){
         return this.money >= amount;
     }
 
@@ -40,14 +36,5 @@ public class Passenger {
             this.money -= amount;
         }
     }
-
-//    public void canAddPassengerBagsToPlane(int passengerBags, int maxNoOfBags){
-//        if passenger.noOfBags >= plane.maxNoOfBags;
-//        this.noOfBags -= plane.maxNoOfBags;
-//    }
-//
-//
-
-
 
 }

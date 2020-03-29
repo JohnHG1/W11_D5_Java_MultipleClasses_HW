@@ -1,20 +1,23 @@
 public enum PlaneType {
 
-    BOEING747("BA268", 100, 150, 190.80),
-    AIRBUS300("BA377", 80, 120, 140.50);
 
-    private final String flightNumber;
+    BOEING747(3, 550),
+    AIRBUS300(5,100);
+
     private final int capacity;
-    private final int maxNoOfBags;
-    private final double ticketCost;
+    private final int maxWeight;
 
 
-    PlaneType(String flightNumber, int capacity, int maxNoOfBags, double ticketCost){
-        this.flightNumber = flightNumber;
+    PlaneType(int capacity, int maxWeight){
         this.capacity = capacity;
-        this.maxNoOfBags = maxNoOfBags;
-        this.ticketCost = ticketCost;
+        this.maxWeight = maxWeight;
     }
 
+    public int getCapacity(){
+        return this.capacity;
+    }
 
+    public int getMaxWeight() {
+        return this.maxWeight;
+    }
 }

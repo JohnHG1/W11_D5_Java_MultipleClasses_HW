@@ -22,20 +22,17 @@ public class PassengerTest {
         assertEquals(2, passenger.getNoOfBags());
     }
 
-    @Test public void hasBagWeight(){
-        assertEquals(5, passenger.getBagWeight());
-    }
 
     @Test
-    public void canPayMoney(){
-        passenger.payMoney(150);
-        assertEquals(100, passenger.getMoney());
+    public void hasMoney(){
+        passenger.hasMoney();
+        assertEquals(250, passenger.hasMoney());
     }
 
     @Test
     public void cannotPayMoneyInsufficientFunds(){
         passenger.payMoney(450);
-        assertEquals(250, passenger.getMoney());
+        assertEquals(250, passenger.hasMoney());
     }
 
 

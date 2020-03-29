@@ -4,45 +4,26 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class PlaneTest {
+    Plane plane;
 
-    private Plane plane;
-    private Passenger passenger;
 
     @Before
     public void setUp(){
-        plane = new Plane("BA268", 100, 150, 180.80 );
-        passenger = new Passenger("Jason Hockey", 550, 2, 40);
-        passenger = new Passenger("Fred Kruger", 600, 1, 23);
-    }
-
-
-    @Test
-    public void canAddPassengerToPlane(Passenger passenger){
-        plane.addPassenger(passenger);
-        assertEquals(1, plane.capacity());
+        plane = new Plane(plane.toString());
     }
 
     @Test
-    public void canAddPassengerToPlane(Passenger passenger){
-        plane.addPassenger(passenger);
-        assertEquals(1, plane.getNumberOfPassengers.size());
-        assertEquals(5, passenger.getMoney());
-        assertEquals(5, plane.getTicketCost());
+    public void hasCapacity(){
+        assertEquals(3, plane.getCapacity());
     }
 
     @Test
-    public void canRemovePassengerFromPlane(Passenger passenger){
-        plane.addPassenger(passenger);
-        plane.removePassengerFromPlane();
-        assertEquals(0, plane.capacity());
+    public void hasMaxWeight(){
+        assertEquals(550, plane.getMaxWeight());
     }
-
-    @Test
-    public void canAddNoBagsToPlane(){
-        passenger.canAddPassengerBagsToPlane(passengerBags, 2);
-        assertEquals(148, plane.getMaxNoOfBags);
-    }
-
-
-
 }
+
+
+
+
+
