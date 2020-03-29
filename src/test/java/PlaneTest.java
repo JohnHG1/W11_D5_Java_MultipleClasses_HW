@@ -9,7 +9,7 @@ public class PlaneTest {
 
     @Before
     public void setUp(){
-        plane = new Plane(plane.toString());
+        plane = new Plane();
     }
 
     @Test

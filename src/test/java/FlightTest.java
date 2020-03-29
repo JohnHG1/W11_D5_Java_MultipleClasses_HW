@@ -2,18 +2,31 @@ import org.junit.Before;
 
 public class FlightTest {
 
-    Flight flight;
-    Plane plane;
+    private Flight flight;
+    private Plane Boeing747;
+
+
+    proPlane plane;
     Passenger passenger1;
     Passenger passenger2;
+    FlightNo flightNo;
+    Destination destination;
+    DepartureTime departureTime;
+
 
 
     @Before
     public void setUp(){
-        flight = new Flight();
-        plane = new PlaneType ("Boeing747", 3,);
+        flight = new Flight("Boeing747", 3, 550);
         passenger1 = new Passenger("John", 250, 2, 40);
         passenger2 = new Passenger("Bob", 50, 1, 15);
+        flightNo = new FlightNo ("BA123");
+        destination = new Destination
+
+
+        flight.addPassenger("John");
+        flight.addPassenger("Bob");
+
 
 
 

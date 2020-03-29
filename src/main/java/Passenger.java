@@ -1,10 +1,10 @@
 public class Passenger {
 
 
-    private String name;
-    private int money;
-    private int passengerBags;
-    private int bagWeight;
+    public String name;
+    public int money;
+    public int passengerBags;
+    public int bagWeight;
 
 
     public Passenger(String name, int money, int passengerBags, int bagWeight){
