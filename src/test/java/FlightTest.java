@@ -1,31 +1,27 @@
 import org.junit.Before;
+import org.junit.Test;
+
+import javax.print.attribute.standard.Destination;
+
+import static org.junit.Assert.assertEquals;
 
 public class FlightTest {
 
     private Flight flight;
-    private Plane Boeing747;
-
-
-    proPlane plane;
-    Passenger passenger1;
-    Passenger passenger2;
-    FlightNo flightNo;
-    Destination destination;
-    DepartureTime departureTime;
-
 
 
     @Before
-    public void setUp(){
-        flight = new Flight("Boeing747", 3, 550);
-        passenger1 = new Passenger("John", 250, 2, 40);
-        passenger2 = new Passenger("Bob", 50, 1, 15);
-        flightNo = new FlightNo ("BA123");
-        destination = new Destination
+    public void setUp() {
+        PlaneType planeType = PlaneType.BOEING747;
+        Plane plane = new Plane(planeType);
+        flight = new Flight("BA246", "Edinburgh", 16.00, plane);
+    }
 
+    @Test
+    public void hasFlightNum(){
+        assertEquals("BA246", flight.getFlightNum());
+    }
 
-        flight.addPassenger("John");
-        flight.addPassenger("Bob");
 
 
 

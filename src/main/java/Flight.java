@@ -1,28 +1,29 @@
 import java.util.ArrayList;
 
 public class Flight {
+    private Plane plane;
+    private String flightNum;
+    private String destination;
+    private double depTime;
 
-    public FlightType flightType;
 
-    public FlightType(String flightNum, String destination, double depTime) {
+    public Flight(String flightNum, String destination, double depTime, Plane plane) {
+        this.flightNum = flightNum;
+        this.destination = destination;
+        this.depTime = depTime;
+        this.plane = plane;
+    }
 
+    public String getFlightNum() {
+        return this.flightNum;
+    }
 
-        public FlightType getFlightType() {
-            return this.flightType;
-        }
+    public String getDestination() {
+        return this.destination;
+    }
 
-        public int getFlightNum() {
-            return this.flightType.getFlightNum();
-        }
-
-        public int getDestination() {
-            return this.flightType.getDestination();
-        }
-
-        public int getDepTime() {
-            return this.flightType.getDepTime();
-        }
-
+    public double getDepTime() {
+        return this.depTime;
     }
 
 }
