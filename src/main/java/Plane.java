@@ -1,24 +1,27 @@
 public class Plane {
 
-    private PlaneType planeType;
 
-    public Plane (PlaneType planeType){
-        this.planeType = planeType;
+    private int capacity;
+    private int totalWeight;
+    private PlaneTypes plane;
+
+    public Plane(PlaneTypes planeType) {
+        this.plane = planeType;
+        this.totalWeight = planeType.getTotalWeight();
+        this.capacity = planeType.getCapacity();
     }
 
-
-    public PlaneType getPlaneType() {
-        return this.planeType;
+    public int getCapacity() {
+        return capacity;
     }
 
-    public int getCapacity(){
-        return this.planeType.getCapacity();
+    public int getTotalWeight() {
+        return totalWeight;
     }
 
-    public int getMaxWeight(){
-        return this.planeType.getMaxWeight();
+    public Plane(int capacity) {
+        this.capacity = capacity;
     }
+
 
 }
-
-

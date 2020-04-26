@@ -1,40 +1,36 @@
 public class Passenger {
 
+    private String name;
+    private int bags;
+    private Flight flight;
+    private int seat;
 
-    public String name;
-    public int money;
-    public int passengerBags;
-    public int bagWeight;
-
-
-    public Passenger(String name, int money, int passengerBags, int bagWeight){
+    public Passenger(String name, int bags) {
         this.name = name;
-        this.money = money;
-        this.passengerBags = passengerBags;
-        this.bagWeight = bagWeight;
+        this.bags = bags;
     }
-
 
     public String getName() {
         return name;
     }
 
-    public int getNoOfBags() {
-     return passengerBags;
+    public int getBags() {
+        return bags;
     }
 
-    public int hasMoney(){
-        return this.money;
-    }
-//
-    public boolean InsufficientMoney(int amount){
-        return this.money >= amount;
+    public Integer getSeat() {
+        return Integer.valueOf(this.seat);
     }
 
-    public void payMoney(int amount) {
-        if (money >= amount){
-            this.money -= amount;
-        }
+    public void setSeat(int seat) {
+        this.seat = seat;
     }
 
+    public Flight getFlight() {
+        return flight;
+    }
+
+    public void addFlight(Flight flight) {
+        this.flight = flight;
+    }
 }

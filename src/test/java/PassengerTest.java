@@ -5,34 +5,39 @@ import static org.junit.Assert.assertEquals;
 
 public class PassengerTest {
 
-        public Passenger passenger;
+    public Passenger passenger;
+    public Flight flight;
+    public Plane plane;
 
     @Before
     public void setUp(){
-        passenger = new Passenger("John HG", 250, 2, 40);
+        plane = new Plane(PlaneTypes.BOEING777);
+        flight = new Flight(plane, "GL767", Airports.GLA, Airports.EDI, "2020-04-30T09:10");
+        passenger = new Passenger("Melinda", 3);
+
     }
 
     @Test
-    public void hasName(){
-        assertEquals("John HG", passenger.getName());
+    public void hasName() {
+        assertEquals("Melinda", passenger.getName());
     }
 
     @Test
-    public void hasBags(){
-        assertEquals(2, passenger.getNoOfBags());
-    }
-
-
-    @Test
-    public void hasMoney(){
-        passenger.hasMoney();
-        assertEquals(250, passenger.hasMoney());
+    public void hasBags() {
+        assertEquals(3, passenger.getBags());
     }
 
     @Test
-    public void cannotPayMoneyInsufficientFunds(){
-        passenger.payMoney(450);
-        assertEquals(250, passenger.hasMoney());
+    public void hasFlight(){
+        passenger.addFlight(flight);
+        assertEquals(flight, passenger.getFlight());
+    }
+
+    @Test
+    public void canGetSeatNumber(){
+        passenger.setSeat(10);
+        Integer num = 10;
+        assertEquals(num , passenger.getSeat());
     }
 
 

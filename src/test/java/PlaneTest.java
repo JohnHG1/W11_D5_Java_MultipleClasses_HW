@@ -4,26 +4,22 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class PlaneTest {
-    Plane plane;
 
+    public Plane plane;
 
     @Before
-    public void setUp(){
-        plane = new Plane();
+    public void setUp() {
+        plane = new Plane(PlaneTypes.BOEING747);
+    }
+
+
+    @Test
+    public void hasCapacity() {
+        assertEquals(5, plane.getCapacity());
     }
 
     @Test
-    public void hasCapacity(){
-        assertEquals(3, plane.getCapacity());
-    }
-
-    @Test
-    public void hasMaxWeight(){
-        assertEquals(550, plane.getMaxWeight());
+    public void hasTotalWeight() {
+        assertEquals(100, plane.getTotalWeight());
     }
 }
-
-
-
-
-
